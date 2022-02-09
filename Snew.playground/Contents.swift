@@ -9,3 +9,7 @@ enum StudyMember: Int {
 var member: StudyMember = .Snew
 
 print(member)
+
+
+var greeting2 = "안녕하세요^^"
+print(greeting2)
