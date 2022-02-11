@@ -4,8 +4,18 @@ import UIKit
 // 1. 일반 반복
 // 2. 배열 반복
 
-for a in 1...3 {
+
+for a in 1..<3 {
     print("\(a)번째 반복")
+}
+
+var houseAnimals = ["Dog", "Cat", "Hamster", "Rabbit", "Hedgehog"]
+for animal in houseAnimals {
+    print(animal, terminator: " / ")
+}
+
+for (idx, animal) in houseAnimals.enumerated() {
+    print("\(idx+1)번째 동물 : \(animal)")
 }
 
 //튜플 순회, 순서가 없다.
@@ -22,7 +32,7 @@ for _ in 1...end {
     result += first
     first += 1
 }
-//print("1부터 10까지 누적 값 : \(result)")
+print("1부터 10까지 누적 값 : \(result)")
 
 //범위 연산자
 //for n in 1..<10 {
@@ -32,11 +42,6 @@ for _ in 1...end {
 //stride(from: to: by:) 함수와 함께 사용가능
 let hours = 12
 let hourInterval = 3
-let five = 5
-for n in stride(from: 1, to: five, by: 2) {
-    print("\(n)")
-}
-
 for n in stride(from: 3, to: hours, by: hourInterval) {
     print("12까지 3의 배수 \(n)")
 }
