@@ -203,6 +203,7 @@ print(type(of: anotherPi))
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 /* ⭐️The Basics - Numeric Literals */
@@ -216,5 +217,7 @@ let decimalDouble = 12.1875
 let exponentDouble = 1.21875e1
 let hexadecimalDouble = 0xC.3p0  //(12 + 3/16) * 2^0
 let hexadecimalDouble2 = 0xAB.CDp4 //(10*16^1 + 11*16^0 + 12*16^-1 + 13*16^-2) * 2^4
+=======
+>>>>>>> 1910d2938495a516193c4cbd35b40c1de8da10b6
 =======
 >>>>>>> 1910d2938495a516193c4cbd35b40c1de8da10b6
