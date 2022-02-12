@@ -136,7 +136,7 @@
 		6C6D8B9A27B7B630008BA1BD = {
 			isa = PBXGroup;
 			children = (
-				6C6D8BB227B7B71D008BA1BD /* 01_Basics */,
+				6C6D8BB227B7B71D008BA1BD /* Basics */,
 				6C6D8BBD27B7B77D008BA1BD /* Basic Operators */,
 				6C6D8BC827B7B78F008BA1BD /* Strings and Characters */,
 				6C6D8BD327B7B798008BA1BD /* Functions */,
@@ -159,12 +159,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6C6D8BB227B7B71D008BA1BD /* 01_Basics */ = {
+		6C6D8BB227B7B71D008BA1BD /* Basics */ = {
 			isa = PBXGroup;
 			children = (
 				6C6D8BB327B7B71D008BA1BD /* main.swift */,
 			);
-			path = 01_Basics;
+			path = Basics;
 			sourceTree = "<group>";
 		};
 		6C6D8BBD27B7B77D008BA1BD /* Basic Operators */ = {
