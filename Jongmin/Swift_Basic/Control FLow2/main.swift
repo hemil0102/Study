@@ -111,3 +111,24 @@ numberLoop: for num in numbers {
         numbers.removeFirst() //3
     }
 }
+
+print("\n")
+//반복문 팁
+
+//1. 뒤에서 for문 도는 법
+
+for i in (1...10).reversed() {
+    print(i)
+}
+
+print("\n")
+//2. 스텝 주는법
+
+for i in stride(from: 0, to: 10, by: 2){ //10 미포함
+    print(i)
+}
+
+print("\n")
+for i in stride(from: 0, through: 10, by: 2){ //10포함
+    print(i)
+}
