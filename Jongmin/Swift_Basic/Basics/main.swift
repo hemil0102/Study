@@ -11,6 +11,7 @@
 /*
  1. 사용자 정의 자료형... 으로 이해
  2. 사람이 기본 자료형 처럼 직접 변수와 기능을 캡슐화 하여 새로운 타입을 만드는 것
+*/
 
 //#2. 함수형
 /*
@@ -39,3 +40,24 @@
 
 // 혹시, 문서에서 바로 마크업 텍스트도 작성 가능하던데..(+ 퀵헬프)
 // 개발 문서에서 Markup Formatting Reference 참고!
+
+
+//var, let
+ var name: String = "yagom"
+ var age: Int = 100
+ var job = "IOS Programmer"
+ var height = 181.5
+ print(type(of: height))
+
+ age = 99
+ job = "Writer"
+ print("my name is \(name), \(age), \(job), \(height)")
+
+ let name2: String = "yagom"
+ var age2: Int = 100
+ var job2 = "iOS Programmer"
+ let height2 = 181.5
+ age2 = 99
+ job2 = "Writer"
+ //name2 = "yagom2" //error
+ print("My name is \(name2), i'm \(age2) years old. i'm \(job2) and the height is \(height2)")
