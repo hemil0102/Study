@@ -16,22 +16,22 @@ import UIKit
                   - UInt ✅
    ⭐️The Basics - Floating-Point Numbers ✅
    ⭐️The Basics - Type Safety and Type Inference ✅
-   ⭐️The Basics - Numeric Literals
-   ⭐️The Basics - Numeric Type Conversion
-                  - Integer Conversion
-                  - Integer and Floating-Point Conversion
-   ⭐️The Basics - Type Aliases
-   ⭐️The Basics - Booleans
-   ⭐️The Basics - Tuples
-   ⭐️The Basics - Optionals
-                  - nil
-                  - If Statements and Forced Unwrapping
-                  - Optional Binding
-                  - Implicitly Unwrapped Optionals
-   ⭐️The Basics - Error Handling
-   ⭐️The Basics - Assertions and PReconditions
-                  - Debugging with Assertions
-                  - Enforcing Preconditions */
+   ⭐️The Basics - Numeric Literals ✅
+   ⭐️The Basics - Numeric Type Conversion ✅
+                  - Integer Conversion ✅
+                  - Integer and Floating-Point Conversion ✅
+   ⭐️The Basics - Type Aliases ✅
+   ⭐️The Basics - Booleans ✅
+   ⭐️The Basics - Tuples ✅
+   ⭐️The Basics - Optionals ✅
+                  - nil ✅
+                  - If Statements and Forced Unwrapping ✅
+                  - Optional Binding ✅
+                  - Implicitly Unwrapped Optionals ✅
+   ⭐️The Basics - Error Handling ✅
+   ⭐️The Basics - Assertions and PReconditions ✅
+                  - Debugging with Assertions ✅
+                  - Enforcing Preconditions ✅ ⚠️ */
 
 // ⬆️ list ⬆️
 
@@ -91,9 +91,9 @@ let 안녕하세요 = "hello"
 print(안녕하세요, 🔥)
 print(type(of: 안녕하세요)) //Returns the type of a value.
 // let 1one = "2"
-// -> error
+// ❌ -> error
 // let W+H+J = "hey"
-// -> '+' is not a postfix unary operator
+// ❌ -> '+' is not a postfix unary operator
 
 var friendlyWelcome = "Hello, Walter & Jongmin!"
 friendlyWelcome = "안녕하세요, 월터 & 종민"
@@ -102,7 +102,7 @@ print(friendlyWelcome)
 
 let itCannotChanged = "Faith"
 // itCannotChanged = "Fake"
-// -> Cannot assign to value: 'itCannotChanged' is a 'let' constant
+// ❌ -> Cannot assign to value: 'itCannotChanged' is a 'let' constant
 
 print("I am so happy that we can practice Swift together, \(friendlyWelcome)")
 // ⚙️(Function) - print(_:separator:terminator:)
@@ -128,7 +128,7 @@ print("I am so happy that we can practice Swift together, \(friendlyWelcome)")
 
 let hallabong = "🍊"; print(hallabong)
 // let threeHallabongs = "🍊🍊🍊" print(threeHallabongs)
-// -> 'Consecutive statements' on a line must be separated by ';'
+// ❌ -> 'Consecutive statements' on a line must be separated by ';'
 
 
 
@@ -151,7 +151,7 @@ print("The range of Int16: \(Int16.min) ~ \(Int16.max) ")
 print("The range of Int32: \(Int32.min) ~ \(Int32.max) ")
 print("The range of Int64: \(Int64.min) ~ \(Int64.max) ")
 // let overflow: Int8 = 128
-// -> integer literal '128' overflows when stored into 'Int8'
+// ❌ -> integer literal '128' overflows when stored into 'Int8'
 
 
 /* ⭐️The Basics - Integers - UInt */
@@ -160,7 +160,7 @@ print("The range of UInt16: \(UInt16.min) ~ \(UInt16.max) ")
 print("The range of UInt32: \(UInt32.min) ~ \(UInt32.max) ")
 print("The range of UInt64: \(UInt64.min) ~ \(UInt64.max) ")
 // let overflow: UInt8 = -1
-// -> Negative interger '-1' overflows when stored into unsigned type 'UInt8'
+// ❌ -> Negative interger '-1' overflows when stored into unsigned type 'UInt8'
 
 
 
@@ -202,8 +202,6 @@ print(type(of: anotherPi))
 // interger + double will be double type.
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 /* ⭐️The Basics - Numeric Literals */
@@ -217,7 +215,279 @@ let decimalDouble = 12.1875
 let exponentDouble = 1.21875e1
 let hexadecimalDouble = 0xC.3p0  //(12 + 3/16) * 2^0
 let hexadecimalDouble2 = 0xAB.CDp4 //(10*16^1 + 11*16^0 + 12*16^-1 + 13*16^-2) * 2^4
-=======
->>>>>>> 1910d2938495a516193c4cbd35b40c1de8da10b6
-=======
->>>>>>> 1910d2938495a516193c4cbd35b40c1de8da10b6
+
+let paddedDouble = 000123.456
+let oneMillion = 1_000_000
+let justOverOneMillion = 1_000_000.000_000_1
+
+
+
+
+/* ⭐️The Basics - Numeric Type Conversion */
+/* ⭐️The Basics - Numeric Type Conversion - Integer Conversion */
+let cannotBeNegative: UInt8 = 1
+//UInt8 cant sotre negative numbers, and so this will report an erro
+// let tooBig: Int8 = Int8.max + 1
+// ❌ -> Int8 can't sotre a number lager than its maximum value,
+// ❌ -> and so this will also report an error
+
+let twoThousand: UInt16 = 2_000
+let one:UInt8 = 1
+let twoThousandAndOne = twoThousand + UInt16(one)
+
+/* ⭐️The Basics - Numeric Type Conversion - Integer and Floating-Point Conversion*/
+
+let three = 3
+let pointOneFourOneFiveNine = 0.14159
+let pi2 = Double(three) + pointOneFourOneFiveNine
+
+let integerPi = Int(pi) //it isn't rounded off
+
+
+
+
+/* ⭐️The Basics - Type Aliases */
+/* Type aliases define an alternative name for an existing type */
+
+typealias AudioSample = UInt16
+var maxAmplitudeFound = AudioSample.min
+print(type(of: maxAmplitudeFound))
+
+
+
+
+/* ⭐️The Basics - Booleans */
+
+let orangesAreOrange = true
+let turnipsAreDelicious = false
+
+if turnipsAreDelicious {
+    print("Mmm, tasty turnips!")
+} else {
+    print("Eww, turnips are horrible.")
+}
+
+/* let i = 1
+if i {
+    
+}*/
+// ❌ -> Type 'int' cannot be used as a boolean; test for '!=0' instead
+
+let i = 1
+if i == 1 {
+    
+}
+
+
+
+
+/* ⭐️The Basics - Tuples */
+/* Tuples group multiple values into a single compound value.
+ The values within a tuple can be of any type and don't have to be of the same type as each other */
+
+let http404Error = (404, "Not Found")
+// http404Error is of type (Int, String), and equals (404, "Not Found")
+
+let (statusCode, statusMessage) = http404Error
+print("The status code is \(statusCode)")
+//Prints "The status code is 404"
+print("The status message is \(statusMessage)")
+
+let (justTheStatusCode, _) = http404Error
+print("The status code is \(justTheStatusCode)")
+
+print("The status code is \(http404Error.0)")
+//Prints "The status code is 404
+print("The status message is \(http404Error.1)")
+//Prints "The status message is Not Found"
+
+let http200Status = (statusCode: 200, description: "OK")
+print("The status code is \(http200Status.statusCode)")
+//Prints "The status code is 200"
+print("The status message is \(http200Status.description)")
+
+
+
+
+/* ⭐️The Basics - Optionals */
+/* You use optionals in situations where a value may be absent.
+   An Optional represents two possibilities:
+   (1) Either there is a value, and you can unwrap the optional to access that value,
+   (2) or there isn't a value at all */
+
+let possibleNumber = "123"
+let convertedNumber = Int(possibleNumber)
+print(type(of:convertedNumber))
+// Int to String
+let possibleNumber2 = 123
+let convertedNumber2 = String(possibleNumber2)
+print(type(of:convertedNumber2))
+// String to Int❓Why it isn't inferred to be of type "String?", or "optional Int"
+
+
+/* ⭐️The Basics - Optionals - nil */
+
+var serverResponseCode: Int? = 404
+// serverResponseCode contains an actual In value of 404
+serverResponseCode = nil
+// serverResponseCode now contains no value
+/* ⚠️ You can't use nil with non-optional constants and variables.
+      If a constant or variable in your code needs to work with the absence of a value under certain conditions,
+      always declare it as an optional value of the appropriate type. */
+
+var surveyAnswer: String?
+print(type(of:surveyAnswer))
+//surveyAnswer is automatically set to nil
+
+
+/* ⭐️The Basics - Optionals - If Statements and Forced Unwrapping */
+/* Forced Unwrapping, an excalmation point(!) to the end of the optional's name,
+   it means "I know that this optional definitely has a value; please use it.*/
+
+if convertedNumber != nil {
+    print("It has a value")
+}
+
+if convertedNumber != nil {
+    print("It has a value \(convertedNumber!)")
+}
+/* Trying to use ! to access a nonexistent optional value triggers a runtime error.
+   Always make sure that an optional contains a non-nil value before using ! to force-unwrap its value */
+
+
+/* ⭐️The Basics - Optionals - Optional Binding */
+/* You use optional biding to find out whether an optional contains a value, and if so,
+   to make that value available as a temporary constant or variable.
+ 
+   Optional binding can be used with if and while satements to check for a value inside an optional,
+   and to extract that value into a constant or variable, as part of a single action.*/
+
+if let actualNumber = Int(possibleNumber) {
+    print("The string \"\(possibleNumber)\" has an integer value of \(actualNumber)")
+} else {
+    print("The string \"\(possibleNumber)\" couldn't be converted to an integer")
+}
+/* If the optional Int returned by In(possibleNumber) contains a value,
+   set a new constant called actualNumber to the value contained in the optional." */
+// print(actualNumber)
+// ❌ -> Error! actualNumber is a temporary constant to extract a value from an optional constant
+
+if let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100
+{
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
+
+if let firstNumber = Int("4") {
+    if let secondNumber = Int("42") {
+        if firstNumber < secondNumber && secondNumber < 100 {
+            print("\(firstNumber) < \(secondNumber) < 100")
+        }
+    }
+}
+
+/* Constants and variables created with optional binding in an if statement are available
+   only within the body of the if statement. In contrast, the constants and variables
+   created with a guard statement are available in the lines of code that follow the
+   'guard statement', as described in Early Exit */
+
+
+/* ⭐️The Basics - Optionals - Implicitly Unwrapped Optionals */
+/* Sometimes it's clear from a program's structure that an optional will always have a vlue,
+   after that value is first set. In these case, it's useful to remove the need to check and
+   unwrap the optional's value every time it's accessed because it can be safely assumed to have
+   a value all of the time
+ 
+   These kinds of optionals are defined as implicitly unwrapped optionals, You writh an implicitly
+   unwrapped optional by placing an exclamation point (String!) rather than a question mark (String?)
+   after the ype that you want to make optional.
+ 
+   the primary use of implicitly unwrapped optionas in Swift is during class initialization.
+ */
+
+let possibleString: String? = "An optional string."
+let forcedString: String = possibleString!
+
+let assumedString: String! = "An implicitly unwrapped optional string."
+let implicitString: String = assumedString
+//has an explicit, non-optional type of String
+print(type(of:assumedString))
+print(type(of:implicitString))
+
+let optionalString = assumedString
+//has nothing explicit, so it will be type of Optional String
+print(type(of:optionalString))
+
+if assumedString != nil {
+    print(assumedString!)
+}
+
+if let definiteString = assumedString {
+    print(definiteString)
+}
+//Optional Binding
+/* ⚠️ Dont' use an implicitly unwrapped optional when there's a possibility of a variable becoming
+   nil at a later point. Always use a normal optional type if you need to check for a nil value
+   during the lifetime of a variable */
+
+
+/* ⭐️The Basics - Optionals - Error Handling */
+/* You use error handling to respond to error conditions your program may encounter
+   during execution.
+ 
+   In contrast to optionals, which can use the presence or absence of a value to
+   communicate success or failure of a 'function'.
+ 
+   When a function encounters an error condition, it throws an error.
+   That function's caller can then catch the error and respond approprately.
+ */
+
+func canThrowAnError() throws {
+    // this function may or may not throw an error
+}
+
+do {
+    try canThrowAnError()
+    // no error was thrown
+} catch {
+    // an error was thrown
+}
+
+func makeASandwich() throws {
+    //...
+}
+
+/*
+do {
+    try makeASandwich() //if error occurs? go to catch (1) or (2), if there is no error, then call (3)
+    eatASandwich() //(3)
+} catch SandwichError.outOFCleanDishes { //(1)
+    washDishes()
+} catch SandwichError.missingIngredients(let ingredients) { //(2)
+    buygroceries(ingredients)
+}
+*/
+
+
+/* ⭐️The Basics - Optionals - Assertions and PReconditions */
+/* ⭐️The Basics - Optionals - Debugging with Assertions */
+
+let age = 2
+// assert(age >= 0, "A Person's age can't be less than zero.")
+// ❌ -> Assertion faile: A person's age can't be less than zero.
+
+if age > 10 {
+    print("You can ride the roller-coaster or the ferris wheel.")
+} else if age >= 0 {
+    print("You can ride the ferris wheel.")
+} else {
+    assertionFailure("A person's age can't be less than zero.")
+}
+
+
+/* ⭐️The Basics - Optionals - Enforcing Preconditions */
+/* Use a preconditon whenever a condtion has the potential to be false,
+   but must definitely be true for your code to continue execution.*/
+
+// precondition(index > 0, "Index must be greater than zero.")
+
+// additional supplement required, less example
