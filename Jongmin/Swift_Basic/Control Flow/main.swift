@@ -6,6 +6,7 @@
 //
 
 // #1 - if
+print("#1 <<if>>")
 
 let first: Int = 5
 let second: Int = 10
@@ -20,8 +21,9 @@ if first > second {
 //분기문이므로 당연히 어느 조건에서 실행되면, 나머지 하위 조건들은 실행되지 않는다!
 //else 나 else if 전부 생략 가능하다. (몇몇 언어에서는 else를 요구하는데도 있더라는... VBA)
 
+print("\n")
 // #2 - switch
-
+print("#2 <<switch>>")
 /* Keyword for switch
  switch -
  case -
@@ -29,9 +31,9 @@ if first > second {
  fallthrough - 아래 구문으로 이동(종료x)
  where - case의 조건 확장
  */
-
+print("\n")
 //case: Integer
-
+print("<<case: Integer>>")
 let integerValue: Int = 5
 
 switch integerValue { //조건에는 다양한 타입이 들어갈 수 있다.
@@ -53,7 +55,9 @@ default: //necessary if the condition is not certain!!
     //break
 }
 
+print("\n")
 //String
+print("<<case: String>>")
 let stringValue: String = "Liam Neeson"
 
 switch stringValue {
@@ -84,8 +88,9 @@ default:
     print("\(stringValue) said")
 }
 
+print("\n")
 //tuple
-
+print("<<case: tuple>>")
 typealias NameAge = (name: String, age: Int)
 
 let tupleValue: NameAge = (name: "Yagom", age: 99)
@@ -101,8 +106,9 @@ default:
     print("who are you looking for")
 }
 
+print("\n")
 //value binding
-
+print("<<case: value binding>>")
 switch tupleValue {
 case ("Yagom", 80):
     print("completely correct")

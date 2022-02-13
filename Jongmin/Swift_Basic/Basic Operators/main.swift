@@ -97,7 +97,7 @@
  */
 
 //전위 연산자 재정의 1
-
+print("<<전위 연산자 재정의 1>>")
 prefix operator ** //** 는 기본연산자에 없기 떄문에 여기서 정의 필요
 
 prefix func ** (_ value: Int) -> Int {
@@ -108,7 +108,9 @@ let minusFive: Int = -5
 let sqrtValue: Int = **minusFive
 print(sqrtValue) //25
 
+print("\n")
 //전위 연산자 재정의 2
+print("<<전위 연산자 재정의 2>>")
 prefix func ! (value: String) -> Bool {
     return value.isEmpty
 }
@@ -123,7 +125,9 @@ isEmptyString = !stringValue
 
 print(isEmptyString) //true
 
+print("\n")
 //전위 연산자 재정의 3
+print("<<전위 연산자 재정의 3>>")
 prefix operator ++
 
 prefix func ++ <T: Numeric>(value: T) -> T { //제네릭
